@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <h2>Top 5 GitHub Users</h2>
+    <p>Tap the username to see more information</p>
+    <div class="top-five">
+      <div class="user" *ngFor="let user of topFive">
+        <ion-button color="primary" [routerLink]="['/', 'person', user.name]" detail>
+          {{user.name}}</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
